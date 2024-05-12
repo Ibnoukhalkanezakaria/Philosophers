@@ -1,8 +1,9 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fsanitize=address #-fsanitize=thread
 RM = rm -rf
 
-SRC = Philosophers.c parsing/print.c \
+SRC = philosophers.c parsing/print.c parsing/checker.c \
+	  functions/ft_atoi.c \
 
 OBJ = ${SRC:.c=.o}
 

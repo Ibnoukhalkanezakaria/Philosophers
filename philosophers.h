@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Philosophers.c                                     :+:      :+:    :+:   */
+/*   philosophers.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zibnoukh <zibnoukh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/12 16:10:53 by zibnoukh          #+#    #+#             */
-/*   Updated: 2024/05/12 16:41:29 by zibnoukh         ###   ########.fr       */
+/*   Created: 2024/05/12 16:26:37 by zibnoukh          #+#    #+#             */
+/*   Updated: 2024/05/12 18:45:59 by zibnoukh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Philosophers.h"
+#ifndef PHILOSOPHERS_H
+# define PHILOSOPHERS_H
 
-int	main(int ac, char **av)
-{
-	(void)av;
-	if (ac > 1)
-		print("Philosophers is leading ...");
-	else
-		print("number_of_philosophers time_to_die time_to_eat time_to_sleep\n");
-	return (0);
-}
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+
+# define INT_MAX 2147483647
+
+void	print(char *s);
+int		checker(int ac, char **av);
+long	ft_atoi(char *s);
+
+#endif

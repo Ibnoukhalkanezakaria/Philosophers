@@ -1,22 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print.c                                            :+:      :+:    :+:   */
+/*   philosophers.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zibnoukh <zibnoukh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 16:10:53 by zibnoukh          #+#    #+#             */
-/*   Updated: 2024/05/12 16:57:05 by zibnoukh         ###   ########.fr       */
+/*   Updated: 2024/05/12 19:58:21 by zibnoukh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../philosophers.h"
+#include "philosophers.h"
 
-void	print(char *s)
+void	call_the_checker(int check, int ac, char **av)
 {
-	int	i;
+	check = checker(ac, av);
+	if (check && (ft_atoi(av[2]) >= 60) && (ft_atoi(av[3]) >= 60)
+		&& (ft_atoi(av[4]) >= 60))
+		print("The Execution Is Loading...");
+	else
+	{
+		print("Error\n");
+		exit(1);
+	}
+}
 
-	i = 0;
-	while (s[i])
-		write(2, &s[i++], 1);
+int	main(int ac, char **av)
+{
+	int	check;
+	int	*p;
+
+	check = 0;
+	if (ac == 5)
+		call_the_checker(check, ac, av);
+	else
+		print("number_of_philosophers time_to_die time_to_eat time_to_sleep\n");
+	return (0);
 }
