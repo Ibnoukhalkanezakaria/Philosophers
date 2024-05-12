@@ -12,10 +12,10 @@
 
 #include "Philosophers.h"
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-    (void)av;
-    if(ac > 1)
-        printf("%s\n", "Philosophers is leading ...");
-    return 0;
+	(void)av;
+	if (ac > 1)
+		printf("%s\n", "Philosophers is leading ...");
+	return (0);
 }
