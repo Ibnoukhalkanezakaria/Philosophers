@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Philosophers.c                                     :+:      :+:    :+:   */
+/*   print.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zibnoukh <zibnoukh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 16:10:53 by zibnoukh          #+#    #+#             */
-/*   Updated: 2024/05/12 16:41:29 by zibnoukh         ###   ########.fr       */
+/*   Updated: 2024/05/12 16:39:32 by zibnoukh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Philosophers.h"
+#include "../Philosophers.h"
 
-int	main(int ac, char **av)
+void    print(char *s)
 {
-	(void)av;
-	if (ac > 1)
-		print("Philosophers is leading ...");
-	else
-		print("number_of_philosophers time_to_die time_to_eat time_to_sleep\n");
-	return (0);
+    int i;
+
+    i = 0;
+    while (s[i])
+        write(2, &s[i++], 1);
 }

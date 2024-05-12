@@ -2,11 +2,11 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
 
-SRC = Philosophers.c 
+SRC = Philosophers.c parsing/print.c \
 
 OBJ = ${SRC:.c=.o}
 
-PROGRAM = philo
+PROGRAM = philosophers
 
 ${PROGRAM}: ${OBJ}
 	${CC} ${CFLAGS} -o $@ $^
