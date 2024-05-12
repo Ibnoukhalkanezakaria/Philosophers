@@ -6,7 +6,7 @@
 /*   By: zibnoukh <zibnoukh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 16:10:53 by zibnoukh          #+#    #+#             */
-/*   Updated: 2024/05/12 19:58:21 by zibnoukh         ###   ########.fr       */
+/*   Updated: 2024/05/12 20:09:49 by zibnoukh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ void	call_the_checker(int check, int ac, char **av)
 	check = checker(ac, av);
 	if (check && (ft_atoi(av[2]) >= 60) && (ft_atoi(av[3]) >= 60)
 		&& (ft_atoi(av[4]) >= 60))
-		print("The Execution Is Loading...");
+		execution(ft_atoi(av[2]), ft_atoi(av[3]), ft_atoi(av[3]),
+			ft_atoi(av[4]));
 	else
 	{
 		print("Error\n");
@@ -28,7 +29,6 @@ void	call_the_checker(int check, int ac, char **av)
 int	main(int ac, char **av)
 {
 	int	check;
-	int	*p;
 
 	check = 0;
 	if (ac == 5)

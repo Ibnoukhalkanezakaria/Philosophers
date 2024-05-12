@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philosophers.h                                     :+:      :+:    :+:   */
+/*   execution.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zibnoukh <zibnoukh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/12 16:26:37 by zibnoukh          #+#    #+#             */
-/*   Updated: 2024/05/12 20:08:15 by zibnoukh         ###   ########.fr       */
+/*   Created: 2024/05/12 20:05:24 by zibnoukh          #+#    #+#             */
+/*   Updated: 2024/05/12 20:08:01 by zibnoukh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILOSOPHERS_H
-# define PHILOSOPHERS_H
+#include "../philosophers.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-
-# define INT_MAX 2147483647
-
-void	print(char *s);
-int		checker(int ac, char **av);
-long	ft_atoi(char *s);
 void	execution(int number_of_philosophers, int time_to_die, int time_to_eat,
-			int time_to_sleep);
-
-#endif
+		int time_to_sleep)
+{
+	printf("number_of_philosophers: %d\n", number_of_philosophers);
+	printf("time_to_die: %d\n", time_to_die);
+	printf("time_to_eat: %d\n", time_to_eat);
+	printf("time_to_sleep: %d\n", time_to_sleep);
+}

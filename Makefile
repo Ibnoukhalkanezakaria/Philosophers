@@ -3,7 +3,7 @@ CFLAGS = -Wall -Wextra -Werror -fsanitize=address #-fsanitize=thread
 RM = rm -rf
 
 SRC = philosophers.c parsing/print.c parsing/checker.c \
-	  functions/ft_atoi.c \
+	  functions/ft_atoi.c execution/execution.c \
 
 OBJ = ${SRC:.c=.o}
 
